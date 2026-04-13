@@ -1,13 +1,13 @@
 import { Box, Divider, Typography } from "@mui/material";
 import { Grid } from "@mui/system";
 import CippFormPage from "../../../../components/CippFormPages/CippFormPage";
-import { Layout as DashboardLayout } from "/src/layouts/index.js";
+import { Layout as DashboardLayout } from "../../../../layouts/index.js";
 import { useForm, useWatch } from "react-hook-form";
 import CippFormComponent from "../../../../components/CippComponents/CippFormComponent";
 import { CippFormCondition } from "../../../../components/CippComponents/CippFormCondition";
 import { CippFormDomainSelector } from "../../../../components/CippComponents/CippFormDomainSelector";
 import { CippFormUserSelector } from "../../../../components/CippComponents/CippFormUserSelector";
-import gdaproles from "/src/data/GDAPRoles.json";
+import gdaproles from "../../../../data/GDAPRoles.json";
 import { useSettings } from "../../../../hooks/use-settings";
 
 const Page = () => {
@@ -26,7 +26,7 @@ const Page = () => {
     <>
       <CippFormPage
         resetForm={false}
-        queryKey={`ListJITAdminTemplates-${userSettingsDefaults.currentTenant}`}
+        queryKey="*JITAdminTemplate*"
         formControl={formControl}
         title="JIT Admin Template"
         backButtonTitle="JIT Admin Templates"
